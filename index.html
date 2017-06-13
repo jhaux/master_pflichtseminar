@@ -1,0 +1,214 @@
+<!doctype html>
+<html lang="en">	
+<head>
+	<meta charset="utf-8">
+    <title>matplotlib <i>et al.</i></title>
+	<link rel="stylesheet" href="css/reveal.css">
+	<link rel="stylesheet" href="css/theme/white.css" id="theme">	
+    <!-- For syntax highlighting -->
+    <link rel="stylesheet" href="lib/css/zenburn.css">
+	<!--Add support for earlier versions of Internet Explorer -->
+	<!--[if lt IE 9]>
+	<script src="lib/js/html5shiv.js"></script>
+	<![endif]-->
+    <!-- Here are my styles -->
+    <link rel="stylesheet" href="customStyles.css">
+    <script>
+	    var link = document.createElement( 'link' );
+	    link.rel = 'stylesheet';
+	    link.type = 'text/css';
+	    link.href = window.location.search.match( /print-pdf/gi ) ? 'css/print/pdf.css' : 'css/print/paper.css';
+	    document.getElementsByTagName( 'head' )[0].appendChild( link );
+    </script>
+</head>
+
+<body>
+	<!-- Wrap the entire slide show in a div using the "reveal" class. -->
+	<div class="reveal">
+		<!-- Wrap all slides in a single "slides" class -->
+		<div class="slides">
+
+			<!-- ALL SLIDES GO HERE -->
+			<!-- Each section element contains an individual slide -->
+
+            <!-- Title -->
+			<section id="title">
+                    <h1>matplotlib <i>et al.</i></h1>
+				<p>plotting is fun</p>
+
+                <aside class="notes">
+                        <p>
+                            Helo ma nem is Johannes
+                        </p>
+                </aside>
+			</section>
+
+            <!-- Outline -->
+			<section id="outline" data-state="showBasicIdea">
+				<h2>Outline</h2>
+                <p class='fragment'>Some concepts</p>
+                <p class='fragment'>Example plots</p>
+                <p class='fragment'>Exporting for various use cases</p>
+                <p class='fragment'>Other libraries</p>
+
+                <aside class="notes">
+                        <p>What to consider when plotting</p>
+                        <p>What kind o plots can we make (any!)</p>
+                        <p>Ways to get these plots into your paper/webpage/mail</p>
+                        <p>There is more!</p>
+                </aside>
+			</section>
+
+            <!-- Concepts -->
+			<section id="concepts">
+			    <section id="concepts-header" data-state="titleSlide" data-background-color="#333333">
+			    	<h1>Concepts</h1>
+			    </section>
+                <section id="basicIdea">
+                    <object id="BasicConceptSVG" data="svg/the_plot_fn.svg" type="image/svg+xml"></object>
+                    <aside class="notes">
+                            <p>The plot is a way to get an idea of the data</p>
+                            <p>Very important as brain visual channel is the best!</p>
+                            <p>We dont care to much about how data is read in, but
+                               How we can present it.</p>
+                            <p>There is numpy, pandas, etc</p>
+                    </aside>
+			    </section>
+                <section id="mplModes">
+                    <object id="BasicConceptSVG" data="svg/the_plot_fn.svg" type="image/svg+xml"></object>
+                    <aside class="notes">
+                            <p>The plot is a way to get an idea of the data</p>
+                            <p>Very important as brain visual channel is the best!</p>
+                            <p>We dont care to much about how data is read in, but
+                               How we can present it</p>
+                    </aside>
+			    </section>
+			</section>
+
+            <!-- Examples -->
+			<section id="Examples">
+			        <section id="examples-header" data-state="titleSlide" data-background-color="#333333">
+			        	<h1>Examples</h1>
+			        </section>
+                    <!-- 1D -->
+                    <section id="hist">
+                            <h2>Histogram</h2>
+                            <aside>
+                                    <p> Also add LEGEND </p>
+                                    <p> Edgecolor, Linecolor, etc </p>
+                            </aside>
+			        </section>
+                    <section id="hist">
+                            <h2>Barchart</h2>
+                            Errorbars
+			        </section>
+
+                    <!-- 2D -->
+                    <section id="hist">
+                            <h2>ScatterPlot</h2>
+                            Errorbars
+			        </section>
+                    <section id="hist">
+                            <h2>Lines</h2>
+                            Errorbars
+			        </section>
+
+                    <!-- 3D -->
+                    <section id="hist">
+                            <h2>Contourplot</h2>
+			        </section>
+                    <section id="hist">
+                            <h2>Images</h2>
+                    </section>
+                    <section id="multi">
+                            <h2>Grouping plots</h2>
+                            <aside>
+                                    <p> plt.subplots </p>
+                                    <p> gridspec </p>
+                            </aside>
+                    </section>
+                    <section id="text">
+                            <h2>Text</h2>
+                            <aside>
+                                    <p> plt.subplots </p>
+                                    <p> gridspec </p>
+                            </aside>
+                    </section>
+            </section>
+
+
+			</div>
+	</div>
+
+	<script src="lib/js/head.min.js"></script>
+	<script src="js/reveal.js"></script>
+	<script>
+		// Required, even if empty.
+		Reveal.initialize({
+
+                math: {
+                        mathjax: "lib/external/MathJax-2.7.1/MathJax.js",
+                },
+
+            	dependencies: [
+						// Cross-browser shim that fully implements classList - https://github.com/eligrey/classList.js/
+						{ src: 'lib/js/classList.js', condition: function() { return !document.body.classList; } },
+
+						// Interpret Markdown in <section> elements
+						{ src: 'plugin/markdown/marked.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+						{ src: 'plugin/markdown/markdown.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+
+						// Syntax highlight for <code> elements
+						{ src: 'plugin/highlight/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } },
+
+						// Zoom in and out with Alt+click
+						{ src: 'plugin/zoom-js/zoom.js', async: true },
+
+						// Speaker notes
+						{ src: 'plugin/notes/notes.js', async: true },
+
+						// MathJax
+						{ src: 'plugin/math/math.js', async: true }
+				],
+
+                // Transition style
+	            transition: 'none', // none/fade/slide/convex/concave/zoom
+                // Transition speed
+                transitionSpeed: 'default', // default/fast/slow
+
+                width: 16/9 * 960,
+                height: 960,
+                
+        });
+        // Shows the slide number using default formatting
+		Reveal.configure({ 
+                slideNumber: true,
+                pdfMaxPagesPerSlide: 1
+        });
+		
+		// Slide number formatting can be configured using these variables:
+		//  "h.v": 	horizontal . vertical slide number (default)
+		//  "h/v": 	horizontal / vertical slide number
+		//    "c": 	flattened slide number
+		//  "c/t": 	flattened slide number / total slides
+		Reveal.configure({ slideNumber: 'c' });
+	</script>
+    <!-- external libraries -->
+    <script src="lib/external/greensock-js/src/minified/TweenMax.min.js"></script>
+    <script src="lib/external/d3/d3.min.js"></script>
+    <script src="lib/external/d3-hsv/d3-hsv.min.js"></script>
+	<script src="lib/external/d3-contour/d3-contour.min.js"></script>
+    <script src="lib/external/jQuery/jquery-3.2.1.min.js"></script>
+    <script src="js/colorbrewer.min.js"></script>
+    <script src="lib/external/seedrandom/seedrandom.min.js"></script>
+
+    <!-- My scripts -->
+    <script src="js/free_energy.js"></script>
+    <script src="js/basic_concept.js"></script>
+    <script src="js/net_view.js"></script>
+    <script src="js/sampling.js"></script>
+    <script src="js/layer-blend.js"></script>
+
+    <script src="js/plotConstructor.js"></script>
+</body>
+</html>

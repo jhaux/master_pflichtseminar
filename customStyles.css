@@ -1,0 +1,206 @@
+input[type=checkbox] {
+          transform: scale(2);
+}
+.reinforce_container {
+  font: 14px sans-serif;
+}
+
+.axis path,
+.axis line {
+  fill: none;
+  stroke: #000;
+  shape-rendering: crispEdges;
+}
+
+.dot {
+  stroke: #000;
+}
+
+.tooltip {
+  font: 11px sans-serif;
+  position: absolute;
+  width: 200px;
+  height: 28px;
+  pointer-events: none;
+}
+
+.equation {
+        font-size: 75% !important;
+        /*
+        position: fixed;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        */
+}
+
+.equation * {
+        font-size: inherit;
+}
+
+.legendMath {
+        font-size: 75% !important;
+}
+
+.legendMath * {
+        font-size: inherit;
+        float: middle;
+}
+
+#Step11, #Step12, #Step21, #Step22, #Step3, #Step4, #Step5 {
+  visibility: hidden;
+}
+
+
+       /***********/
+      /*  PLOTS  */
+     /***********/
+
+/* Alignment */
+
+.plot {
+    float: middle-center;
+}
+
+.options {
+    float: left;
+    text-align: right;
+}
+
+.legend {
+    position: absolute;
+    top: 500px;
+    bottom: 50px;
+    right: 75%;
+    left: 3%;
+    font-size: 80% !important;
+}
+
+.left {
+        float: left;
+}
+
+.right {
+        float: right;
+}
+
+
+/* Lines */
+
+.axis path,
+.axis line {
+        fill: None;
+        stroke: #000;
+        shape-rendering: geometricPrecision;
+        stroke-width: 1px;
+}
+
+.glimpseLine {
+     stroke-width: 1;
+     stroke: green;
+}
+
+.trajLine,
+.gradLine {
+        stroke-width: 1;
+        stroke: #fff;
+}
+
+.gradLineMarker {
+        fill: #fff;
+        stroke: #fff;
+}
+
+.gradLine.mean {
+        stroke-width: 2;
+        stroke: #ffdf00;
+}
+
+.gradLineMarkerMean {
+        fill: #ffdf00;
+        stroke: #ffdf00;
+}
+
+svg.samplingSvgContainer #trajectory-original,
+svg.samplingSvgContainer #trajectory-original > line
+{
+        stroke-width: 2;
+        stroke: red;
+}
+
+/* Text in plots */
+
+.glimpsePrediction {
+        font-size: 50%;
+        fill: #ff0000;
+}
+
+.axis {
+        font: 20px sans-serif;
+}
+
+/* Blending */
+
+.glimpseRects {
+        mix-blend-mode: lighten;
+}
+
+.plotBG {
+    fill: #440154;
+}
+
+/* do not show steps other than 1 in plots at beginning */
+.step2, .step3, .step4, .step5, .step6, .step7 {
+        opacity: 0;
+        display: none;
+}
+
+  /**************/
+ /*   Tables   */
+/**************/
+
+.accTable {
+    width: 30%;
+}
+
+  /**************/
+ /*   Cites    */
+/**************/
+
+.citation {
+        opacity: 0.7 !important;
+        font-size: 70% !important;
+        text-align: right;
+        width: 90%;
+        position: absolute;
+        bottom: -5%;
+}
+
+.empty {
+        opacity: 0 !important;
+}
+
+  /*************/
+ /*   Code    */
+/*************/
+
+.codeBubble {
+        float: middle;
+        vertical-align: middle;
+}
+.code {
+        float: right;
+        width: 70%;
+}
+
+.codeDescription {
+        float: left;
+        width: 30%;
+        text-align: left;
+}
+
+.reveal section img {
+    border: none !important;
+    box-shadow: none;
+    background: none;
+}
